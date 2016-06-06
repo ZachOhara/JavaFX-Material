@@ -16,13 +16,13 @@
 
 package io.github.zachohara.materialfx.transition.interpolator;
 
-public class FastOutSlowInInterpolator extends BezierInterpolator {
+public class StandardInterpolator extends BezierInterpolator {
 	
 	private static final double[][] BEZIER_POINTS = {
 		{0.0, 0.0}, {0.4, 0.0}, {0.2, 1.0}, {1.0, 1.0},
 	};
 	
-	public FastOutSlowInInterpolator() {
+	public StandardInterpolator() {
 		super(BEZIER_POINTS);
 	}
 	

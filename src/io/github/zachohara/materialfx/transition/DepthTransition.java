@@ -17,14 +17,14 @@
 package io.github.zachohara.materialfx.transition;
 
 import io.github.zachohara.materialfx.depthshadow.ShadowedPane;
-import io.github.zachohara.materialfx.transition.interpolator.FastOutSlowInInterpolator;
+import io.github.zachohara.materialfx.transition.interpolator.StandardInterpolator;
 import javafx.animation.Interpolator;
 import javafx.util.Duration;
 
 public class DepthTransition extends MaterialTransition {
 	
 	private static final double DURATION = 100; // milliseconds
-	private static final Interpolator INTERPOLATOR = new FastOutSlowInInterpolator();
+	private static final Interpolator INTERPOLATOR = new StandardInterpolator();
 	
 	private final ShadowedPane oldShadow;
 	private final ShadowedPane newShadow;

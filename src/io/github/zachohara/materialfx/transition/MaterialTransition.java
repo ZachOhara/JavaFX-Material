@@ -23,25 +23,25 @@ import javafx.animation.Transition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-public abstract class MaterialTransition extends Transition implements EventHandler<ActionEvent> {
+public abstract class MaterialTransition<T extends MaterialTransition<T>> extends Transition implements EventHandler<ActionEvent> {
 	
-	private final List<TransitionCompletionListener> completionListeners;
+	private final List<TransitionCompletionListener<T>> completionListeners;
 	
 	public MaterialTransition() {
 		super();
 		
-		this.completionListeners = new LinkedList<TransitionCompletionListener>();
+		this.completionListeners = new LinkedList<TransitionCompletionListener<T>>();
 		
 		this.setOnFinished(this);
 	}
 	
-	public final void addCompletionListener(TransitionCompletionListener completionListener) {
+	public final void addCompletionListener(TransitionCompletionListener<T> completionListener) {
 		this.completionListeners.add(completionListener);
 	}
 	
 	@Override
 	public final void handle(ActionEvent event) {
-		for (TransitionCompletionListener listener : this.completionListeners) {
+		for (TransitionCompletionListener<T> listener : this.completionListeners) {
 			listener.handleTransitionCompletion(this);
 		}
 	}

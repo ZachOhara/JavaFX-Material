@@ -16,8 +16,27 @@
 
 package io.github.zachohara.materialfx.transition;
 
-public interface TransitionCompletionListener<T extends MaterialTransition<T>> {
+import javafx.animation.Interpolator;
+import javafx.beans.property.DoubleProperty;
+
+public abstract class PropertyTransition<T extends PropertyTransition<T>> extends MaterialTransition<T> {
 	
-	public void handleTransitionCompletion(MaterialTransition<T> transition);
+	private final DoubleProperty property;
+	private final double startValue;
+	private final double increment;
+	
+	public PropertyTransition(DoubleProperty property, double increment, Interpolator interpolator) {
+		this.property = property;
+		this.startValue = property.get();
+		this.increment = increment;
+		if (interpolator != null) {
+			this.setInterpolator(interpolator);
+		}
+	}
+	
+	@Override
+	public final void interpolate(double fraction) {
+		this.property.set(this.startValue + (fraction * this.increment));
+	}
 
 }

@@ -14,24 +14,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.github.zachohara.materialfx.transition;
+package io.github.zachohara.materialfx.transition.translation;
 
-import javafx.beans.property.DoubleProperty;
+import io.github.zachohara.materialfx.transition.PropertyTransition;
+import javafx.animation.Interpolator;
+import javafx.scene.Node;
 
-public class InterpolatedProperty {
-	
-	private final DoubleProperty property;
-	private final double startValue;
-	private final double increment;
-	
-	public InterpolatedProperty(DoubleProperty property, double increment) {
-		this.property = property;
-		this.startValue = property.get();
-		this.increment = increment;
-	}
-	
-	public void interpolate(double fraction) {
-		this.property.set(this.startValue + (fraction * this.increment));
+public class HorizontalTranslation extends PropertyTransition<HorizontalTranslation> {
+
+	public HorizontalTranslation(Node slidingNode, double distance, Interpolator interpolator) {
+		super(slidingNode.layoutXProperty(), distance, interpolator);
 	}
 
 }

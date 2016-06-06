@@ -21,7 +21,7 @@ import io.github.zachohara.materialfx.transition.interpolator.StandardInterpolat
 import javafx.animation.Interpolator;
 import javafx.util.Duration;
 
-public class DepthTransition extends MaterialTransition {
+public class DepthTransition extends MaterialTransition<DepthTransition> {
 	
 	private static final double DURATION = 100; // milliseconds
 	private static final Interpolator INTERPOLATOR = new StandardInterpolator();

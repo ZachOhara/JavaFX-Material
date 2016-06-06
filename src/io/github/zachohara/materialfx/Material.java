@@ -24,7 +24,7 @@ import io.github.zachohara.materialfx.transition.TransitionCompletionListener;
 import io.github.zachohara.materialfx.util.PropertyMirror;
 import javafx.scene.layout.Pane;
 
-public class Material extends Pane implements TransitionCompletionListener {
+public class Material extends Pane implements TransitionCompletionListener<DepthTransition> {
 	
 	private ShadowedPane shadow;
 	private Pane background;
@@ -63,7 +63,7 @@ public class Material extends Pane implements TransitionCompletionListener {
 	}
 
 	@Override
-	public void handleTransitionCompletion(MaterialTransition transition) {
+	public void handleTransitionCompletion(MaterialTransition<DepthTransition> transition) {
 		if (transition instanceof DepthTransition) {
 			DepthTransition depthTransition = (DepthTransition) transition;
 			this.getChildren().remove(depthTransition.getOldShadow());

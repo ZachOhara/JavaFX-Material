@@ -32,11 +32,12 @@ public class Material extends Pane implements TransitionCompletionListener {
 		super();
 		
 		this.background = new Pane();
-		ResizeHandler.mimicSize(this, this.background);
+		ResizeHandler.mirrorSize(this, this.background);
 		this.getChildren().add(this.background);
 	}
 	
 	public final void setBackgroundStyle(String style) {
+		this.setStyle(style);
 		this.background.setStyle(style);
 	}
 	
@@ -57,7 +58,7 @@ public class Material extends Pane implements TransitionCompletionListener {
 		ShadowedPane shadow = new ShadowedPane(depth);
 		shadow.setPrefWidth(this.getPrefWidth());
 		shadow.setPrefHeight(this.getPrefHeight());
-		ResizeHandler.mimicSize(this, shadow);
+		ResizeHandler.mirrorSize(this, shadow);
 		shadow.setStyle(this.getStyle());
 		this.getChildren().add(shadow);
 		shadow.toBack();

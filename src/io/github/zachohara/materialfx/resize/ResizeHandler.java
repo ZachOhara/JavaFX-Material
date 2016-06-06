@@ -28,45 +28,45 @@ public class ResizeHandler implements EventHandler<ResizeEvent> {
 	
 	private static final ResizeHandler singleton = new ResizeHandler();
 	
-	private final Map<Region, List<Region>> widthMimes;
-	private final Map<Region, List<Region>> heightMimes;
+	private final Map<Region, List<Region>> widthMirrors;
+	private final Map<Region, List<Region>> heightMirrors;
 	
 	private ResizeHandler() {
-		this.widthMimes = new HashMap<Region, List<Region>>();
-		this.heightMimes = new HashMap<Region, List<Region>>();
+		this.widthMirrors = new HashMap<Region, List<Region>>();
+		this.heightMirrors = new HashMap<Region, List<Region>>();
 	}
 
 	@Override
 	public void handle(ResizeEvent event) {
 		Region source = (Region) event.getSource();
-		List<Region> widthMimes = this.widthMimes.get(source);
-		List<Region> heightMimes = this.heightMimes.get(source);
-		if (widthMimes != null) {
-			for (Region r : widthMimes) {
+		List<Region> widthTargets = this.widthMirrors.get(source);
+		List<Region> heightTargets = this.heightMirrors.get(source);
+		if (widthTargets != null) {
+			for (Region r : widthTargets) {
 				r.setPrefWidth(source.getWidth());
 			}
 		}
-		if (heightMimes != null) {
-			for (Region r : heightMimes) {
+		if (heightTargets != null) {
+			for (Region r : heightTargets) {
 				r.setPrefHeight(source.getHeight());
 			}
 		}
 	}
 	
-	public static void mimicSize(Region source, Region target) {
-		ResizeHandler.mimicWidth(source, target);
-		ResizeHandler.mimicHeight(source, target);
+	public static void mirrorSize(Region source, Region target) {
+		ResizeHandler.mirrorWidth(source, target);
+		ResizeHandler.mirrorHeight(source, target);
 	}
 	
-	public static void mimicWidth(Region source, Region target) {
-		ResizeHandler.mimicProperty(source, target, singleton.widthMimes);
+	public static void mirrorWidth(Region source, Region target) {
+		ResizeHandler.mirrorProperty(source, target, singleton.widthMirrors);
 	}
 	
-	public static void mimicHeight(Region source, Region target) {
-		ResizeHandler.mimicProperty(source, target, singleton.heightMimes);		
+	public static void mirrorHeight(Region source, Region target) {
+		ResizeHandler.mirrorProperty(source, target, singleton.heightMirrors);		
 	}
 	
-	private static void mimicProperty(Region source, Region target, Map<Region, List<Region>> property) {
+	private static void mirrorProperty(Region source, Region target, Map<Region, List<Region>> property) {
 		List<Region> mimes;
 		if (property.containsKey(source)) {
 			mimes = property.get(source);
@@ -83,8 +83,8 @@ public class ResizeHandler implements EventHandler<ResizeEvent> {
 	}
 	
 	public static void disconnectTarget(Region target) {
-		ResizeHandler.disconnectTarget(singleton.widthMimes, target);
-		ResizeHandler.disconnectTarget(singleton.heightMimes, target);
+		ResizeHandler.disconnectTarget(singleton.widthMirrors, target);
+		ResizeHandler.disconnectTarget(singleton.heightMirrors, target);
 	}
 	
 	private static void disconnectTarget(Map<Region, List<Region>> property, Region target) {

@@ -37,11 +37,11 @@ public class DepthTransition extends MaterialTransition {
 		this.setCycleDuration(Duration.millis(DURATION));
 	}
 	
-	public ShadowedPane getOldShadow() {
+	public final ShadowedPane getOldShadow() {
 		return this.oldShadow;
 	}
 	
-	public ShadowedPane getNewShadow() {
+	public final ShadowedPane getNewShadow() {
 		return this.newShadow;
 	}
 

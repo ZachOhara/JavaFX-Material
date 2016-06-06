@@ -46,7 +46,7 @@ public class BezierCurve {
 		return new Point2D(x, y);
 	}
 	
-	public static void populateArrayPosition(double[][] array, int i, int j, double t) {
+	private static void populateArrayPosition(double[][] array, int i, int j, double t) {
 		double x0 = array[i - 1][j];
 		double x1 = array[i - 1][j + 1];
 		double xf = x0 + (t * (x1 - x0));

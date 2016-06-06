@@ -19,10 +19,13 @@ package io.github.zachohara.materialfx.transition.translation.screen;
 import io.github.zachohara.materialfx.transition.translation.HorizontalTranslation;
 import io.github.zachohara.materialfx.transition.translation.VerticalTranslation;
 import io.github.zachohara.materialfx.transition.MaterialTransition;
+import io.github.zachohara.materialfx.transition.interpolator.StandardInterpolator;
 import javafx.animation.Interpolator;
 import javafx.scene.Node;
 
 public class DiagonalScreenTranslation extends MaterialTransition<DiagonalScreenTranslation> {
+	
+	private static final Interpolator INTERPOLATOR = new StandardInterpolator();
 	
 	private final HorizontalTranslation horizontal;
 	private final VerticalTranslation vertical;
@@ -30,11 +33,11 @@ public class DiagonalScreenTranslation extends MaterialTransition<DiagonalScreen
 	private final boolean isMovingUp;
 	
 	public DiagonalScreenTranslation(Node translatingNode, double distanceX,
-			double distanceY, Interpolator interpolator) {
+			double distanceY) {
 		this.horizontal = new HorizontalTranslation(translatingNode, distanceX, null);
 		this.vertical = new VerticalTranslation(translatingNode, distanceY, null);
 		this.isMovingUp = (distanceY >= 0);
-		this.setInterpolator(interpolator);
+		this.setInterpolator(INTERPOLATOR);
 	}
 	
 	@Override

@@ -21,6 +21,7 @@ import io.github.zachohara.materialfx.resize.ResizeHandler;
 import io.github.zachohara.materialfx.transition.DepthTransition;
 import io.github.zachohara.materialfx.transition.MaterialTransition;
 import io.github.zachohara.materialfx.transition.TransitionCompletionListener;
+import io.github.zachohara.materialfx.util.PropertyMirror;
 import javafx.scene.layout.Pane;
 
 public class Material extends Pane implements TransitionCompletionListener {
@@ -33,12 +34,8 @@ public class Material extends Pane implements TransitionCompletionListener {
 		
 		this.background = new Pane();
 		ResizeHandler.mirrorSize(this, this.background);
+		new PropertyMirror<String>(this.styleProperty(), this.background.styleProperty());
 		this.getChildren().add(this.background);
-	}
-	
-	public final void setBackgroundStyle(String style) {
-		this.setStyle(style);
-		this.background.setStyle(style);
 	}
 	
 	public final void setDepth(int depth) {

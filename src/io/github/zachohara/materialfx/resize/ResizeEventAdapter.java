@@ -32,7 +32,7 @@ public class ResizeEventAdapter implements ChangeListener<Number> {
 	}
 
 	@Override
-	public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+	public final void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
 		this.eventHandler.handle(new ResizeEvent(this.eventSource));
 	}
 	

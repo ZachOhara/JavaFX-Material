@@ -37,7 +37,7 @@ public class ResizeHandler implements EventHandler<ResizeEvent> {
 	}
 
 	@Override
-	public void handle(ResizeEvent event) {
+	public final void handle(ResizeEvent event) {
 		Region source = (Region) event.getSource();
 		List<Region> widthTargets = this.widthMirrors.get(source);
 		List<Region> heightTargets = this.heightMirrors.get(source);

@@ -33,7 +33,7 @@ public class PropertyMirror<T> implements ChangeListener<T> {
 	}
 
 	@Override
-	public void changed(ObservableValue<? extends T> observable, T oldValue, T newValue) {
+	public final void changed(ObservableValue<? extends T> observable, T oldValue, T newValue) {
 		target.setValue(source.getValue());
 	}
 	

@@ -36,7 +36,7 @@ public class MaterialScene extends Scene implements StyledElement {
 		this.rootPane = rootPane;
 		this.styleManager = new StylePropertyManager(this.rootPane.styleProperty());
 		
-		this.addStyleProperty("background-color", MaterialColor.GREY_50);
+		this.addStyleProperty("background-color", MaterialColor.GREY_050);
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public enum MaterialColor {
 	BLACK ("#000000"),
 	WHITE ("#FFFFFF"),
 	
-	RED_50 ("#FFEBEE"),
+	RED_050 ("#FFEBEE"),
 	RED_100 ("#FFCDD2"),
 	RED_200 ("#EF9A9A"),
 	RED_300 ("#E57373"),
@@ -59,7 +59,7 @@ public enum MaterialColor {
 	RED_A400 ("#FF1744"),
 	RED_A700 ("#D50000"),
 	
-	PINK_50 ("#FCE4EC"),
+	PINK_050 ("#FCE4EC"),
 	PINK_100 ("#F8BBD0"),
 	PINK_200 ("#F48FB1"),
 	PINK_300 ("#F06292"),
@@ -75,7 +75,7 @@ public enum MaterialColor {
 	PINK_A400 ("#F50057"),
 	PINK_A700 ("#C51162"),
 	
-	PURPLE_50 ("#F3E5F5"),
+	PURPLE_050 ("#F3E5F5"),
 	PURPLE_100 ("#E1BEE7"),
 	PURPLE_200 ("#CE93D8"),
 	PURPLE_300 ("#BA68C8"),
@@ -91,7 +91,7 @@ public enum MaterialColor {
 	PURPLE_A400 ("#D500F9"),
 	PURPLE_A700 ("#AA00FF"),
 	
-	DEEP_PURPLE_50 ("#EDE7F6"),
+	DEEP_PURPLE_050 ("#EDE7F6"),
 	DEEP_PURPLE_100 ("#D1C4E9"),
 	DEEP_PURPLE_200 ("#B39DDB"),
 	DEEP_PURPLE_300 ("#9575CD"),
@@ -107,7 +107,7 @@ public enum MaterialColor {
 	DEEP_PURPLE_A400 ("#651FFF"),
 	DEEP_PURPLE_A700 ("#6200EA"),
 	
-	INDIGO_50 ("#E8EAF6"),
+	INDIGO_050 ("#E8EAF6"),
 	INDIGO_100 ("#C5CAE9"),
 	INDIGO_200 ("#9FA8DA"),
 	INDIGO_300 ("#7986CB"),
@@ -123,7 +123,7 @@ public enum MaterialColor {
 	INDIGO_A400 ("#3D5AFE"),
 	INDIGO_A700 ("#304FFE"),
 	
-	BLUE_50 ("#E3F2FD"),
+	BLUE_050 ("#E3F2FD"),
 	BLUE_100 ("#BBDEFB"),
 	BLUE_200 ("#90CAF9"),
 	BLUE_300 ("#64B5F6"),
@@ -139,7 +139,7 @@ public enum MaterialColor {
 	BLUE_A400 ("#2979FF"),
 	BLUE_A700 ("#2962FF"),
 	
-	LIGHT_BLUE_50 ("#E1F5FE"),
+	LIGHT_BLUE_050 ("#E1F5FE"),
 	LIGHT_BLUE_100 ("#B3E5FC"),
 	LIGHT_BLUE_200 ("#81D4FA"),
 	LIGHT_BLUE_300 ("#4FC3F7"),
@@ -155,7 +155,7 @@ public enum MaterialColor {
 	LIGHT_BLUE_A400 ("#00B0FF"),
 	LIGHT_BLUE_A700 ("#0091EA"),
 	
-	CYAN_50 ("#E0F7FA"),
+	CYAN_050 ("#E0F7FA"),
 	CYAN_100 ("#B2EBF2"),
 	CYAN_200 ("#80DEEA"),
 	CYAN_300 ("#4DD0E1"),
@@ -171,7 +171,7 @@ public enum MaterialColor {
 	CYAN_A400 ("#00E5FF"),
 	CYAN_A700 ("#00B8D4"),
 	
-	TEAL_50 ("#E0F2F1"),
+	TEAL_050 ("#E0F2F1"),
 	TEAL_100 ("#B2DFDB"),
 	TEAL_200 ("#80CBC4"),
 	TEAL_300 ("#4DB6AC"),
@@ -187,7 +187,7 @@ public enum MaterialColor {
 	TEAL_A400 ("#1DE9B6"),
 	TEAL_A700 ("#00BFA5"),
 	
-	GREEN_50 ("#E8F5E9"),
+	GREEN_050 ("#E8F5E9"),
 	GREEN_100 ("#C8E6C9"),
 	GREEN_200 ("#A5D6A7"),
 	GREEN_300 ("#81C784"),
@@ -203,7 +203,7 @@ public enum MaterialColor {
 	GREEN_A400 ("#00E676"),
 	GREEN_A700 ("#00C853"),
 	
-	LIGHT_GREEN_50 ("#F1F8E9"),
+	LIGHT_GREEN_050 ("#F1F8E9"),
 	LIGHT_GREEN_100 ("#DCEDC8"),
 	LIGHT_GREEN_200 ("#C5E1A5"),
 	LIGHT_GREEN_300 ("#AED581"),
@@ -219,7 +219,7 @@ public enum MaterialColor {
 	LIGHT_GREEN_A400 ("#76FF03"),
 	LIGHT_GREEN_A700 ("#64DD17"),
 	
-	LIME_50 ("#F9FBE7"),
+	LIME_050 ("#F9FBE7"),
 	LIME_100 ("#F0F4C3"),
 	LIME_200 ("#E6EE9C"),
 	LIME_300 ("#DCE775"),
@@ -235,7 +235,7 @@ public enum MaterialColor {
 	LIME_A400 ("#C6FF00"),
 	LIME_A700 ("0#AEEA00"),
 	
-	YELLOW_50 ("#FFFDE7"),
+	YELLOW_050 ("#FFFDE7"),
 	YELLOW_100 ("#FFF9C4"),
 	YELLOW_200 ("#FFF59D"),
 	YELLOW_300 ("#FFF176"),
@@ -251,7 +251,7 @@ public enum MaterialColor {
 	YELLOW_A400 ("#FFEA00"),
 	YELLOW_A700 ("#FFD600"),
 	
-	AMBER_50 ("#FFF8E1"),
+	AMBER_050 ("#FFF8E1"),
 	AMBER_100 ("#FFECB3"),
 	AMBER_200 ("#FFE082"),
 	AMBER_300 ("#FFD54F"),
@@ -267,7 +267,7 @@ public enum MaterialColor {
 	AMBER_A400 ("#FFC400"),
 	AMBER_A700 ("#FFAB00"),
 	
-	ORANGE_50 ("#FFF3E0"),
+	ORANGE_050 ("#FFF3E0"),
 	ORANGE_100 ("#FFE0B2"),
 	ORANGE_200 ("#FFCC80"),
 	ORANGE_300 ("#FFB74D"),
@@ -283,7 +283,7 @@ public enum MaterialColor {
 	ORANGE_A400 ("#FF9100"),
 	ORANGE_A700 ("#FF6D00"),
 	
-	DEEP_ORANGE_50 ("#FBE9E7"),
+	DEEP_ORANGE_050 ("#FBE9E7"),
 	DEEP_ORANGE_100 ("#FFCCBC"),
 	DEEP_ORANGE_200 ("#FFAB91"),
 	DEEP_ORANGE_300 ("#FF8A65"),
@@ -299,7 +299,7 @@ public enum MaterialColor {
 	DEEP_ORANGE_A400 ("#FF3D00"),
 	DEEP_ORANGE_A700 ("#DD2C00"),
 	
-	BROWN_50 ("#EFEBE9"),
+	BROWN_050 ("#EFEBE9"),
 	BROWN_100 ("#D7CCC8"),
 	BROWN_200 ("#BCAAA4"),
 	BROWN_300 ("#A1887F"),
@@ -310,7 +310,7 @@ public enum MaterialColor {
 	BROWN_800 ("#4E342E"),
 	BROWN_900 ("#3E2723"),
 	
-	GREY_50 ("#FAFAFA"),
+	GREY_050 ("#FAFAFA"),
 	GREY_100 ("#F5F5F5"),
 	GREY_200 ("#EEEEEE"),
 	GREY_300 ("#E0E0E0"),
@@ -321,7 +321,7 @@ public enum MaterialColor {
 	GREY_800 ("#424242"),
 	GREY_900 ("#212121"),
 	
-	BLUE_GREY_50 ("#ECEFF1"),
+	BLUE_GREY_050 ("#ECEFF1"),
 	BLUE_GREY_100 ("#CFD8DC"),
 	BLUE_GREY_200 ("#B0BEC5"),
 	BLUE_GREY_300 ("#90A4AE"),

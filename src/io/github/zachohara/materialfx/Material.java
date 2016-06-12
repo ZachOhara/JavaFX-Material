@@ -24,14 +24,16 @@ import io.github.zachohara.materialfx.transition.TransitionCompletionListener;
 import io.github.zachohara.materialfx.util.PropertyMirror;
 import javafx.scene.layout.Pane;
 
-public class Material extends Pane implements TransitionCompletionListener<DepthTransition> {
+public class Material extends Pane implements StyledElement, TransitionCompletionListener<DepthTransition> {
 	
+	private final StylePropertyManager styleManager;
+	private final Pane background;
 	private ShadowedPane shadow;
-	private Pane background;
 	
 	public Material() {
 		super();
 		
+		this.styleManager = new StylePropertyManager(this.styleProperty());
 		this.background = new Pane();
 		ResizeHandler.mirrorSize(this, this.background);
 		new PropertyMirror<String>(this.styleProperty(), this.background.styleProperty());
@@ -63,12 +65,22 @@ public class Material extends Pane implements TransitionCompletionListener<Depth
 	}
 
 	@Override
-	public void handleTransitionCompletion(MaterialTransition<DepthTransition> transition) {
+	public final void handleTransitionCompletion(MaterialTransition<DepthTransition> transition) {
 		if (transition instanceof DepthTransition) {
 			DepthTransition depthTransition = (DepthTransition) transition;
 			this.getChildren().remove(depthTransition.getOldShadow());
 			ResizeHandler.disconnectTarget(depthTransition.getOldShadow());
 		}
+	}
+
+	@Override
+	public final void addStyleProperty(String parameter, Object value) {
+		this.styleManager.addStyleProperty(parameter, value);
+	}
+
+	@Override
+	public final String getStylePropertyValue(String parameter) {
+		return this.styleManager.getStylePropertyValue(parameter);
 	}
 	
 }
